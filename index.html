@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Simulator</title>
+  <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Financial Simulator</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="add-card.html">Add Card</a>
+      <a href="#">Planner payments</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <nav id="tabsContainer"></nav>
+
+    <h1>Card Data</h1>
+    <div id="cardDetails"></div>
+
+    <!-- Modal de edición -->
+    <div id="editModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Edit Card</h2>
+        <form id="editCardForm">
+          <label>Card Name:<input type="text" id="editName" required></label>
+          <label>Limit Balance:<input type="number" id="editLimit" step="0.01" required></label>
+          <label>Balance Available today:<input type="number" id="editAvailable" step="0.01" required></label>
+          <label>Annual interest rate (%):<input type="number" id="editInterest" step="0.01" required></label>
+          <label>Cut-off Date:<input type="number" id="editCutDay" min="1" max="31" required></label>
+          <label>Color:
+            <select id="editColor" required>
+              <option value="red">Red</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+            </select>
+          </label>
+          <button type="submit">Add Card</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/cards.js"></script>
+  <script src="js/nav.js"></script>
+
+</body>
+</html>
