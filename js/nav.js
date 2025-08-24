@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fechaCorte.setDate(cutDay);
 
     let fechaLimite = new Date(fechaCorte);
-    fechaLimite.setDate(fechaCorte.getDate() + 30);
+    fechaLimite.setDate(fechaCorte.getDate() + 20);
 
     // If Saturday (6) or Sunday (0), move to Friday.
     if (fechaLimite.getDay() === 6) {
